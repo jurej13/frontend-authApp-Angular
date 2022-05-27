@@ -25,7 +25,7 @@ export class LoginComponent  {
     const{email,password} = this.miFormulario.value
     this.authService.login(email,password)
       .subscribe(ok => {
-        console.log(ok)
+        
         if(ok === true){
           this.router.navigateByUrl('/dashboard')
         }else{
@@ -34,5 +34,4 @@ export class LoginComponent  {
         }
       })
   }
-
 }
